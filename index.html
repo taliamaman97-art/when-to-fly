@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מתי לטוס? | העונה הכי טובה לכל יעד</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>✈️ מתי לטוס?</h1>
+      <p>העונה והחודשים הכי טובים לטוס לכל יעד בעולם</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" type="search" placeholder="חפשו מדינה… (למשל: יפן)" autocomplete="off">
+
+      <div class="month-picker">
+        <span class="label">מתי אתם טסים?</span>
+        <div id="months" class="chips"></div>
+      </div>
+
+      <div class="continent-picker">
+        <span class="label">יבשת</span>
+        <div id="continents" class="chips"></div>
+      </div>
+    </section>
+
+    <div class="summary-row">
+      <p id="summary"></p>
+      <div class="legend">
+        <span><i class="dot best"></i>מומלץ ביותר</span>
+        <span><i class="dot good"></i>זמן טוב</span>
+        <span><i class="dot ok"></i>סביר</span>
+        <span><i class="dot avoid"></i>עדיף להימנע</span>
+      </div>
+    </div>
+
+    <section id="grid" class="grid"></section>
+    <p id="empty" class="empty" hidden>לא נמצאו יעדים. נסו לשנות את החיפוש או את הסינון.</p>
+  </main>
+
+  <footer class="footer">
+    המידע הוא הערכה כללית. מזג האוויר משתנה בין אזורים באותה מדינה, ולכן כדאי לבדוק לפני שמזמינים.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
