@@ -96,8 +96,17 @@ function cardHTML(d) {
     badge = `<span class="badge ${r}">${labels[r]} ב${MONTH_NAMES[state.month - 1]}</span>`;
   }
 
+  const photo = IMAGES[d.code];
+  const photoHTML = photo
+    ? `<figure class="card-photo">
+        <img src="${photo.src}" alt="${photo.place}" loading="lazy" onerror="this.parentElement.remove()">
+        <figcaption>📍 ${photo.place}</figcaption>
+      </figure>`
+    : "";
+
   return `
     <article class="card">
+      ${photoHTML}
       <div class="card-head">
         <img src="https://flagcdn.com/w80/${d.code}.png" alt="דגל ${d.name}" loading="lazy">
         <div>
